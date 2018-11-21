@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[129]:
+# In[148]:
 
 
 # Required modules and imports
@@ -10,7 +10,7 @@ from glob import glob
 import os
 
 
-# In[130]:
+# In[149]:
 
 
 # Expected file structure for raw data
@@ -23,7 +23,7 @@ import os
 #                                   |- PNUEMONIA
 
 
-# In[131]:
+# In[150]:
 
 
 # Store processed data in the following file structure
@@ -36,7 +36,7 @@ import os
 #                                         |- PNUEMONIA
 
 
-# In[132]:
+# In[151]:
 
 
 # Constants
@@ -55,10 +55,11 @@ IMG_WIDTH = 244
 IMG_HEIGHT = 244
 IMG_EXT = 'jpeg'
 
-SUCCESS_MSG = 'Sucessfully resized and saved new images in ./data/' + PROCESSED_IMG_DIR + '/'
+START_MSG = 'Processing images ...\nThis may take up to several minutes ...'
+SUCCESS_MSG = 'Sucessfully resized and saved new images in ./data/' + PROCESSED_IMG_DIR + '/' + '\nDone.'
 
 
-# In[133]:
+# In[152]:
 
 
 def getProcessedPath(rawPath):
@@ -72,7 +73,7 @@ def getProcessedPath(rawPath):
     return '/'.join(dirs)
 
 
-# In[134]:
+# In[153]:
 
 
 def resizeAndSaveImg(path):
@@ -82,11 +83,12 @@ def resizeAndSaveImg(path):
     img.save(getProcessedPath(path))
 
 
-# In[126]:
+# In[154]:
 
 
 def resizeAllImages():
     """Resizes all the raw images."""
+    print(START_MSG)
     for _dir in RAW_IMG_DIRS:
         img_paths = glob(_dir + '/*.' + IMG_EXT)
         for path in img_paths:
@@ -94,7 +96,7 @@ def resizeAllImages():
     print(SUCCESS_MSG)
 
 
-# In[127]:
+# In[155]:
 
 
 resizeAllImages()
