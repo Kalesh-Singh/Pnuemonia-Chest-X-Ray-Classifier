@@ -1,16 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[148]:
-
-
 # Required modules and imports
 from PIL import Image
 from glob import glob
 import os
-
-
-# In[149]:
 
 
 # Expected file structure for raw data
@@ -23,9 +14,6 @@ import os
 #                                   |- PNUEMONIA
 
 
-# In[150]:
-
-
 # Store processed data in the following file structure
 
 # . |-data |-chest_xray_processed |-test  |- NORMAL
@@ -34,9 +22,6 @@ import os
 #                                         |- PNUEMONIA
 #                                 |-val   |- NORMAL
 #                                         |- PNUEMONIA
-
-
-# In[151]:
 
 
 # Constants
@@ -59,9 +44,6 @@ START_MSG = 'Processing images ...\nThis may take up to several minutes ...'
 SUCCESS_MSG = 'Sucessfully resized and saved new images in ./data/' + PROCESSED_IMG_DIR + '/' + '\nDone.'
 
 
-# In[152]:
-
-
 def getProcessedPath(rawPath):
     """Returns the path to save the resized image."""
     rawPath = rawPath.replace('\\', '/')
@@ -73,17 +55,11 @@ def getProcessedPath(rawPath):
     return '/'.join(dirs)
 
 
-# In[153]:
-
-
 def resizeAndSaveImg(path):
     """Resizes and saves the image."""
     img = Image.open(path)
     img = img.resize((IMG_WIDTH, IMG_HEIGHT), Image.ANTIALIAS)
     img.save(getProcessedPath(path))
-
-
-# In[154]:
 
 
 def resizeAllImages():
@@ -96,14 +72,4 @@ def resizeAllImages():
     print(SUCCESS_MSG)
 
 
-# In[155]:
-
-
 resizeAllImages()
-
-
-# In[ ]:
-
-
-
-
