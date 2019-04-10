@@ -175,6 +175,10 @@ After reading about the origin of our dataset we found that text mining was used
 
 Another problem that Oakden Rayner pointed out, was that of all the pictures in the model 89% of the pictures were labelled as pneumonia. He took it upon himself to label them one by one based on his experience and he found that only 35% of the images in the dataset showed a patient that was potentially suffering from pneumonia. Even Though he clarified that he was not a doctor and that his job was only to write down what he observed in the x-rays, he mentioned that the text mining approach had a bigger margin of error compared to that of a radiologist. The more precise approach would have been the patient head doctor.
 
+![Figure 18](./readme-imgs/fig18.png?raw=true "Figure 18: Text Mining vs Visual.")
+
+__Figure 18: Text Mining vs Visual.__
+
 ### Medical Perspective ###
 There are several elements that we need to understand in terms of diagnosis, some of these points are taken out from [8].
 1. Some diseases or conditions are clinically diagnosed, this means that they are not diagnosed solely based on an image. Some diseases are pneumonia, emphysema and some types of fibrosis [3]. If we look at the process of how pneumonia is diagnosed we see steps. First, the patient gets symptoms and goes to the doctor if doctor suspects pneumonia then an x ray will be ordered and further tests need to happen such as cat scans, pulse oximetry and blood tests. With all of the information given of the tests then the doctor will diagnose pneumonia. This process makes us wonder if a human doctor needs all of this information to make a decision; why would we expect a machine learning to classify a condition of a patient solely based on an image?
@@ -184,7 +188,6 @@ There are several elements that we need to understand in terms of diagnosis, som
 What is the model actually learning? There was a popular paper from Zhang et al. a while back which showed that deep learning can fit random labels in training data. Random noise could be a good regularizer, and sometimes it can improve or increase performance. Random noise that improves performance is called label smoothing ot soft labels. Contrary to random noise in our original dataset we had what is called structured noise, this will add a truly different signal that the model will try to learn. In a training set with bad labels, a neural network will treat these as equally valid examples of pneumonia. If the goal is to maximise performance, then structured labeled noise is always a negative.
 
 An example of this, is when dermatologist look at a lesion if they think its malignant include a ruler in the bipsy pictures. By adding the ruler it does not mean that the lesion is malignant, but if you train a model with pictures every picture that has a ruler it will predict that is malignant given the correlation. As  Dr. Novoa from Stanford dermatology emphasizes the algorithm doesn’t know why that correlation makes sense, so it could easily misinterpret a random ruler sighting as grounds to diagnose cancer. The take home message here is that deep learning is really powerful. Indiscriminately so. If you give it complex images with biased labels, it can learn to distinguish between the classes even when the classes are meaningless.
-
 
 
 ## Conclusion ##
