@@ -40,7 +40,10 @@ In our data set analysis we found some common traits in the x ray of patient tha
 
 We reviewed more than 50 images of the dataset to get a sense of what the differences between pneumonia and non-pneumonia x-rays looked like. This would prove that the Convolutional Neural Network would be able to spot the differences of the different pictures. Below in Table 1 a few examples of images with clear differences. On the left side, we can observe a clear x ray and on the right side we can observe opacities in the lung area of the right lung.
 
-![Alt text](./readme-imgs/table1.png?raw=true "Normal versus pneumonia x rays and their differences.")
+![Alt text](./readme-imgs/table1.png?raw=true "Table 1: Normal versus pneumonia x rays and their differences")
+
+__Table 1: Normal versus pneumonia x rays and their differences.__
+
 #### Feature Engineering ####
 The dataset images were not consistent in dimensions. In order to user VGG19 (which would explain the implementation section) the images had to be 244 x 244px. Therefore we had to do some transformations to the images so they had these dimensions. All the images were scaled so that all of them had the same dimensions.
 
