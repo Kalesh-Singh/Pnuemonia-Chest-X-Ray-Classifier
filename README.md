@@ -14,14 +14,13 @@
     + [Choosing an Architecture](#choosing-an-architecture)
     + [Specifications of the Architecture](#specifications-of-the-architecture)
     + [Test Runs](#test-runs)
-4. [Code](#code)
-5. [Results](#results)
-6. [Discussion](#discussion)
+4. [Results](#results)
+5. [Discussion](#discussion)
     + [Visual vs History](#visual-vs-history)
     + [Medical Perspective](#medical-perspective)
     + [Are these Images Any Good for Analysis](#are-these-images-any-good-for-analysis)
-7. [Conclusion](#conclusion)
-8. [References](#references)
+6. [Conclusion](#conclusion)
+7. [References](#references)
 
 ## Introduction ##
 ### Motivation ###
@@ -106,8 +105,6 @@ For project purposes we tried different configurations and runs. The ones depict
 
 __Table 5: The generalized attempted runs for the project.__
 
-## Code ##
-
 
 ## Results ##
 Since we ran and produced different results with different architectures, in this section we will show plots and confusion matrices for each of the most important runs that we had.
@@ -188,6 +185,7 @@ There are several elements that we need to understand in terms of diagnosis, som
 What is the model actually learning? There was a popular paper from Zhang et al. a while back which showed that deep learning can fit random labels in training data. Random noise could be a good regularizer, and sometimes it can improve or increase performance. Random noise that improves performance is called label smoothing ot soft labels. Contrary to random noise in our original dataset we had what is called structured noise, this will add a truly different signal that the model will try to learn. In a training set with bad labels, a neural network will treat these as equally valid examples of pneumonia. If the goal is to maximise performance, then structured labeled noise is always a negative.
 
 An example of this, is when dermatologist look at a lesion if they think its malignant include a ruler in the bipsy pictures. By adding the ruler it does not mean that the lesion is malignant, but if you train a model with pictures every picture that has a ruler it will predict that is malignant given the correlation. As  Dr. Novoa from Stanford dermatology emphasizes the algorithm doesn’t know why that correlation makes sense, so it could easily misinterpret a random ruler sighting as grounds to diagnose cancer. The take home message here is that deep learning is really powerful. Indiscriminately so. If you give it complex images with biased labels, it can learn to distinguish between the classes even when the classes are meaningless.
+
 
 
 ## Conclusion ##
