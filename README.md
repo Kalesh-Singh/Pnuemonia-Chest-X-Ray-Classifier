@@ -40,7 +40,7 @@ In our data set analysis we found some common traits in the x ray of patient tha
 
 We reviewed more than 50 images of the dataset to get a sense of what the differences between pneumonia and non-pneumonia x-rays looked like. This would prove that the Convolutional Neural Network would be able to spot the differences of the different pictures. Below in Table 1 a few examples of images with clear differences. On the left side, we can observe a clear x ray and on the right side we can observe opacities in the lung area of the right lung.
 
-![Alt text](./readme-imgs/table1.png?raw=true "Table 1: Normal versus pneumonia x rays and their differences")
+![Table 1](./readme-imgs/table1.png?raw=true "Table 1: Normal versus pneumonia x rays and their differences")
 
 __Table 1: Normal versus pneumonia x rays and their differences.__
 
@@ -48,7 +48,19 @@ __Table 1: Normal versus pneumonia x rays and their differences.__
 The dataset images were not consistent in dimensions. In order to user VGG19 (which would explain the implementation section) the images had to be 244 x 244px. Therefore we had to do some transformations to the images so they had these dimensions. All the images were scaled so that all of them had the same dimensions.
 
 #### Additional Dataset ####
-As a suggestion from our professor, after a revision of early results, we took a subset of the training images. We choose 240 images of No-pneumonia and 364 of Pneumonia, and try to run our model on that data. We chose clearer examples of non-pneumonia cases and pneumonia cases, even though we are not radiologist or experts in the topic we proceeded to take clear x rays without opacities as non-pneumonia cases, images with opacities as pneumonia cases and the ones that were maybe compromised by the scaling or difficult to read x rays were discarded. We will discuss our findings in the results section. Below in Tables 2, 3 & 4 you can see some examples of clear x rays, x rays with opacities and trashed x rays. Also, we did a review of the validation and test data with the same requirements.
+After a revision of early results, we took a subset of the training images. We choose 240 images of No-pneumonia and 364 of Pneumonia, and try to run our model on that data. We chose clearer examples of non-pneumonia cases and pneumonia cases, even though we are not radiologist or experts in the topic we proceeded to take clear x rays without opacities as non-pneumonia cases, images with opacities as pneumonia cases and the ones that were maybe compromised by the scaling or difficult to read x rays were discarded. We will discuss our findings in the results section. Below in Tables 2, 3 & 4 you can see some examples of clear x rays, x rays with opacities and trashed x rays. Also, we did a review of the validation and test data with the same requirements.
+
+![Table 2](./readme-imgs/table2.png?raw=true "Table 2: Normal clear x rays chosen by Team Amigos.")
+
+__Table 2: Normal clear x rays.__
+
+![Table 3](./readme-imgs/table3.png?raw=true "Table 3: X rays with opacities chosen by Team Amigos.")
+
+__Table 3: X rays with opacities.__
+
+![Table 4](./readme-imgs/table4.png?raw=true "able 4: X rays compromised by scaling or unclear difference.")
+
+__Table 4: X rays compromised by scaling or unclear difference.__
 
 ## Implementation ##
 As mentioned before we will be using the method of transfer learning for this project, which is a term in deep learning. Transfer learning establishes that the Convolutional Neural Networks have the capability to learn information about other data sets.  Very few people train CNN from scratch because it is rare to have a dataset of sufficient size [8]. Since we had an original training dataset of close to 3,500 images, we choose to use pre-trained model.
