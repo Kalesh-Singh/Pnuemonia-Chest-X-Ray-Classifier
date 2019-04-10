@@ -1,4 +1,10 @@
-# Pneumonia Chest Xray Classifier #
+# Pneumonia Chest X-ray Classifier #
+
+__Authors:__
++ Kaleshwar Singh (Howard University)
++ Lianne Sanchez (University of Puerto Rico, Mayaguez)
++ Krystalis Rohena (University of Puerto Rico, Mayaguez)
+
 
 ## Table of Contents ##
 
