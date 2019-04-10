@@ -112,6 +112,62 @@ __Table 5: The generalized attempted runs for the project.__
 ## Results ##
 Since we ran and produced different results with different architectures, in this section we will show plots and confusion matrices for each of the most important runs that we had.
 
+### First Run ###
+
+![Figure 6](./readme-imgs/fig6.png?raw=true "Figure 6: Model Accuracy.")
+
+__Figure 6: Model Accuracy.__
+
+![Figure 7](./readme-imgs/fig7.png?raw=true "Figure 7: Model Loss Curves.")
+
+__Figure 7: Model Loss Curves.__
+
+![Figure 8](./readme-imgs/fig8.png?raw=true "Figure 8: Confusion Matrix.")
+
+__Figure 8: Confusion Matrix.__
+
+### Second Run ###
+
+![Figure 9](./readme-imgs/fig9.png?raw=true "Figure 9: Model Accuracy.")
+
+__Figure 9: Model Accuracy.__
+
+![Figure 10](./readme-imgs/fig10.png?raw=true "Figure 10: Model Loss Curves.")
+
+__Figure 10: Model Loss Curves.__
+
+![Figure 11](./readme-imgs/fig11.png?raw=true "Figure 11: Confusion Matrix.")
+
+__Figure 11: Confusion Matrix.__
+
+### Third Run ###
+
+![Figure 12](./readme-imgs/fig12.png?raw=true "Figure 12: Model Accuracy.")
+
+__Figure 12: Model Accuracy.__
+
+![Figure 13](./readme-imgs/fig13.png?raw=true "Figure 13: Model Loss Curves.")
+
+__Figure 13: Model Loss Curves.__
+
+![Figure 14](./readme-imgs/fig14.png?raw=true "Figure 14: Confusion Matrix.")
+
+__Figure 14: Confusion Matrix.__
+
+### Forth Run ###
+
+![Figure 15](./readme-imgs/fig15.png?raw=true "Figure 15: Model Accuracy.")
+
+__Figure 15: Model Accuracy.__
+
+![Figure 16](./readme-imgs/fig16.png?raw=true "Figure 16: Model Loss Curves.")
+
+__Figure 16: Model Loss Curves.__
+
+![Figure 17](./readme-imgs/fig17.png?raw=true "Figure 17: Confusion Matrix.")
+
+__Figure 17: Confusion Matrix.__
+
 ## Discussion ##
 In this section our main goal is to explain why we think our model did not perform well enough to be used by medical professionals. There are several elements that could have caused this bad classification behavior. We tried using VGG19 pre-trained model, VGG16 pre-trained model. Also, we tested adding 5 layers to the output of the pre-trained model, tried dropout, tried L2 regularization, adding 1 or 2 layers at the output of the pre-trained model. After all of our intense work trying to get a good model we were unsuccessful. We feel that there are various important reasons that caused this, explained below.
 ### Visual vs History ###
