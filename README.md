@@ -58,7 +58,7 @@ __Table 2: Normal clear x rays.__
 
 __Table 3: X rays with opacities.__
 
-![Table 4](./readme-imgs/table4.png?raw=true "able 4: X rays compromised by scaling or unclear difference.")
+![Table 4](./readme-imgs/table4.png?raw=true "Table 4: X rays compromised by scaling or unclear difference.")
 
 __Table 4: X rays compromised by scaling or unclear difference.__
 
@@ -68,6 +68,10 @@ As mentioned before we will be using the method of transfer learning for this pr
 ### Choosing an Architecture ###
 In Figure 1, we can observe a comparison between different pre-trained models. At the beginning of our project we decided to go with model VGG-19 pre-trained model as observed it has a 70% accuracy which is really good. In later runs of the project we ran VGG-16 which has the same accuracy but less operations.  We noticed that bigger operations number does not mean the model is better. The less operations the model had the less parameters it has which would be better for approaching.
 
+![Figure 1](./readme-imgs/fig1.png?raw=true "Figure 1: Comparison of pre-trained models.")
+
+__Figure 1: Comparison of pre-trained models.__
+
 ### Specifications of the Architecture ###
 In Figure 2, it can be observed the architecture of VGG-19 which we used for the first run of the project. It is important to understand that we made some additions to the pre-trained model. The following were added to the architecture:
     
@@ -76,12 +80,31 @@ In Figure 2, it can be observed the architecture of VGG-19 which we used for the
 
 Important to explain that we used 2 class output layer with softmax activation given that we had to classify an image between two classes either normal lungs or lungs with pneumonia. These two classes are mutually exclusive, since a person cannot have normal lungs and lungs with pneumonia at the same time.
 
+![Figure 2](./readme-imgs/fig2.png?raw=true "Figure 2: VGG-19 pre-trained model architecture.")
+
+__Figure 2: VGG-19 pre-trained model architecture.__
+
+![Figure 3](./readme-imgs/fig3.png?raw=true "Figure 3: Our modified model architecture for early runs.")
+
+__Figure 3: Our modified model architecture for early runs.__
 
 In Figure 4, we can observe the architecture of VGG-16, later on used. We started to use VGG-16 given the advice of Prof. Yoon of testing our model with a known reliable dataset. We tested our model with the cat vs. dogs dataset, and the accuracy was close to 40%. Meaning that there was something wrong with the pipeline of the model that was trained beforehand. By testing the VGG-16 with cats vs dogs we noticed that it got about 85% of accuracy and decided to change our chosen pre-trained model from VGG-19 to VGG-16. The following were added to the architecture:
 + 2 class output layer with softmax activation. Chosen for the reasons explained previously.
 
+![Figure 4](./readme-imgs/fig4.png?raw=true "Figure 4: VGG-16 pre-trained model architecture.")
+
+__Figure 4: VGG-16 pre-trained model architecture.__
+
+![Figure 5](./readme-imgs/fig5.png?raw=true "Figure 5: Our modified model architecture for later runs.")
+
+__Figure 5: Our modified model architecture for later runs.__
+
 ### Test Runs ###
 For project purposes we tried different configurations and runs. The ones depicted in Table 5 were the most important and the ones with better results. The results of the runs will be discussed in the next sections of the document. In Table 5 the first column is the number of configuration of the model that was tried, the second is the pre-trained model used, the third one is the extra layers used in output of the function. The next column is the dropout in each layer added for example if we added five layers with a dropout of 50% then 50% of the neurons in each layer would be discarded in training. We also specify the optimizer used, the loss, the epochs, batch sizes and SE which stands for Steps per Epochs. Finally, we establish which dataset was used the Original stands for the dataset that was downloaded from Kaggle and passed through a scaling process, the New one stand for the selection of specific cases from the Original. 
+
+![Table 5](./readme-imgs/table5.png?raw=true "Table 5: The generalized attempted runs for the project.")
+
+__Table 5: The generalized attempted runs for the project.__
 
 ## Code ##
 
