@@ -5,6 +5,11 @@ __Authors:__
 + Lianne Sanchez (University of Puerto Rico, Mayaguez)
 + Krystalis Rohena (University of Puerto Rico, Mayaguez)
 
+__Advisors:__
++ Ilmi Yoon (San Jose State Univeristy)
++ Colin Raffel (Google)
++ Sally Goldman (Google)
+
 
 ## Table of Contents ##
 
