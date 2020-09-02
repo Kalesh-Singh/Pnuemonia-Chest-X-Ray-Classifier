@@ -3,7 +3,7 @@
 __Authors:__
 + Kaleshwar Singh (Howard University)
 + Lianne Sanchez (University of Puerto Rico, Mayaguez)
-+ Krystalis Rohena (University of Puerto Rico, Mayaguez)
++ Kristalys Rohena (University of Puerto Rico, Mayaguez)
 
 __Advisors:__
 + Ilmi Yoon (San Jose State Univeristy)
